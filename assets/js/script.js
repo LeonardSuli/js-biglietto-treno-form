@@ -20,3 +20,10 @@
 // visualizzare il calcolo finale con il prezzo. 
 // Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina 
 // (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). 
+
+
+
+// Elements richiesti
+const age_input_element = document.querySelector('#age');
+const km_input_element = document.querySelector('#km');
+const generate_button_element = document.querySelector('#generate');
