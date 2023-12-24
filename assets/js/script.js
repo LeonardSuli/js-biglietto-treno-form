@@ -27,3 +27,49 @@
 const age_input_element = document.querySelector('#age');
 const km_input_element = document.querySelector('#km');
 const generate_button_element = document.querySelector('#generate');
+
+const price_per_km = 0.21;
+
+
+// Event listener sul button
+generate_button_element.addEventListener('click', function(){
+
+    console.log('click', age_input_element.value, km_input_element.value);
+
+    // Trasformato i value ricevuti in variabili
+    const age = parseInt(age_input_element.value);
+    const km = Number(km_input_element.value);
+
+    let full_price = km * price_per_km;
+    let discount;
+
+    console.log(age, km, price_per_km);
+    console.log(full_price); //prezzo del biglietto
+
+    if (age < 18){
+
+        console.log('sconto 20%');
+        discount = 0.2;
+
+    } else if (age > 65) {
+
+        console.log('sconto 40%');
+        discount = 0.4;
+
+    } else {
+
+        console.log(full_price);
+        discount = 0;
+
+    }
+
+    // aggiunto prezzo finale con 2 decimali
+    const final_price = (full_price - (full_price * discount)).toFixed(2);
+
+    console.log(final_price);
+
+
+
+
+
+})
