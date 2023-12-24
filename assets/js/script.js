@@ -68,6 +68,8 @@ generate_button_element.addEventListener('click', function(){
 
     console.log(final_price);
 
+    document.querySelector('.ticket').innerHTML = 'il prezzo del biglietto è:' + final_price;
+
 
 
 
